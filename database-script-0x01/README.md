@@ -6,6 +6,11 @@ The schema is designed following **normalization principles (up to 3NF)** to ens
 
 ---
 
+## Database ERD
+![.airbnb_erd.png](./airbnb_erd.png)
+
+---
+
 ## 🏗️ Entities & Attributes
 ### 1. Users
 - Stores guest, host, and admin details.
@@ -40,7 +45,6 @@ The schema was normalized in steps:
 2. **2NF** – Eliminated partial dependencies by ensuring non-key attributes depend on the full primary key (e.g., booking details tied to `booking_id`).  
 3. **3NF** – Removed transitive dependencies (e.g., no derived attributes like `total nights` in booking table).  
 
-📄 See [../normalization.md](../normalization.md) for detailed steps.
 
 ---
 
@@ -63,4 +67,7 @@ Indexes were added for performance:
 📌 Indexes improve **read/query speed**, especially on joins, at the cost of slightly slower writes.
 
 ---
+
+
+
 
